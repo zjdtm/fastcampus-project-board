@@ -1,3 +1,7 @@
+insert into user_account (user_id, user_password, nickname, email, memo, created_at, created_by, modified_at, modified_by) values
+    ('seo', 'seo1234', 'Seo', 'seo@gmail.com', 'I am Seo.', now(), 'seo', now(), 'uno')
+;
+
 insert into article (title, content, hashtag, created_by, modified_by, created_at, modified_at) values ('Morbi porttitor lorem id ligula.', 'Morbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.', 'Goldenrod', 'Rowen', 'Ramon', '2022-10-18 16:20:56', '2022-07-19 12:22:36');
 insert into article (title, content, hashtag, created_by, modified_by, created_at, modified_at) values ('Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros.', 'In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.', 'Crimson', 'Thomasin', 'Fayina', '2023-06-11 17:02:54', '2022-06-30 09:37:58');
 insert into article (title, content, hashtag, created_by, modified_by, created_at, modified_at) values ('Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est.', 'Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.', 'Puce', 'Leroy', 'Nana', '2023-03-29 11:04:08', '2022-09-26 20:12:28');
