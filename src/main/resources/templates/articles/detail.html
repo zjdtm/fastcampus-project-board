@@ -13,101 +13,108 @@
 
 <body>
 
-    <header id="header"></header>
+<header id="header">
+    헤더 삽입부
+    <hr>
+</header>
 
-    <main class="container">
-        <header class="py-5 text-center">
-            <h1>첫번째 글</h1>
-        </header>
+<main id="article-main" class="container">
+    <header id="article-header" class="py-5 text-center">
+        <h1>첫번째 글</h1>
+    </header>
 
-        <div class="row g-5">
-            <section class="col-md-5 col-lg-4 order-md-last">
-                <aside>
-                    <p><span class="nick-name">Seo</span></p>
-                    <p><a class="u-url" rel="me" href="mailto:seo@naver.com">seo@naver.com</a></p>
-                    <p>
-                        <time datetime="2022-01-01T00:00:00">2023-06-23</time>
-                    </p>
-                    <p>#java</p>
-                </aside>
-            </section>
+    <div class="row g-5">
+        <section class="col-md-5 col-lg-4 order-md-last">
+            <aside>
+                <p><span id="nick-name">Seo</span></p>
+                <p><a id="email">seo@naver.com</a></p>
+                <p><time id="created-at" datetime="2022-01-01T00:00:00">2023-06-23</time></p>
+                <p><span id="hashtag">#java</span></p>
+            </aside>
+        </section>
 
-            <article class="col-md-7 col-lg-8">
-                <p>본문<br><br></p>
-            </article>
-        </div>
+        <article id="article-content" class="col-md-7 col-lg-8">
+            <pre>본문<br><br></pre>
+        </article>
+    </div>
 
-        <div class="row g-5">
-            <section>
-                <form class="row g-3">
-                    <div class="col-8">
-                        <label for="comment-textbox" hidden>댓글</label>
-                        <textarea class="form-control" id="comment-textbox" placeholder="댓글 쓰기..." row="3"></textarea>
+    <div class="row g-5">
+        <section>
+            <form class="row g-3">
+                <div class="col-8">
+                    <label for="comment-textbox" hidden>댓글</label>
+                    <textarea class="form-control" id="comment-textbox" placeholder="댓글 쓰기..." row="3"></textarea>
+                </div>
+                <div class="col-auto">
+                    <label for="comment-submit" hidden>댓글 쓰기</label>
+                    <button class="btn btn-primary" id="comment-submit" type="submit">쓰기</button>
+                </div>
+            </form>
+
+            <ul id="article-comments" class="row col-7">
+                <li>
+                    <div>
+                        <strong>Seo</strong>
+                        <small><time>2023-06-12</time></small>
+                        <p>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been the industry's standard dummy text ever since the 1500s,
+                            when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                        </p>
                     </div>
-                    <div class="col-auto">
-                        <label for="comment-submit" hidden>댓글 쓰기</label>
-                        <button class="btn btn-primary" id="comment-submit" type="submit">쓰기</button>
+                </li>
+                <li>
+                    <div>
+                        <strong>Seo</strong>
+                        <small><time>2023-06-12</time></small>
+                        <p>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been the industry's standard dummy text ever since the 1500s,
+                            when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                        </p>
                     </div>
-                </form>
+                </li>
+                <li>
+                    <div>
+                        <strong>Seo</strong>
+                        <small><time>2023-06-12</time></small>
+                        <p>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been the industry's standard dummy text ever since the 1500s,
+                            when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                        </p>
+                    </div>
+                </li>
+            </ul>
 
-                <ul>
-                    <li>
-                        <div>
-                            <time><small>2023-06-12</small></time>
-                            <stron>Seo</stron>
-                            <p>
-                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                                when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                            </p>
-                        </div>
-                    </li>
-                    <li>
-                        <div>
-                            <time><small>2023-06-12</small></time>
-                            <stron>Seo</stron>
-                            <p>
-                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                                when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                            </p>
-                        </div>
-                    </li>
-                    <li>
-                        <div>
-                            <time><small>2023-06-12</small></time>
-                            <stron>Seo</stron>
-                            <p>
-                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                                when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                            </p>
-                        </div>
-                    </li>
-                </ul>
+        </section>
+    </div>
 
-            </section>
-        </div>
+    <div class="row g-5">
+        <nav aria-label="Page navigation example">
+            <ul class="pagination">
+                <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Previous">
+                        <span aria-hidden="true">&laquo; prev</span>
+                    </a>
+                </li>
+                <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Next">
+                        <span aria-hidden="true">next &raquo;</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
 
-        <div class="row g-5">
-            <nav aria-label="Page navigation example">
-                <ul class="pagination" >
-                    <li class="page-item">
-                        <a class="page-link" href="#" aria-label="Previous">
-                            <span aria-hidden="true">&laquo; prev</span>
-                        </a>
-                    </li>
-                    <li class="page-item">
-                        <a class="page-link" href="#" aria-label="Next">
-                            <span aria-hidden="true">next &raquo;</span>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
+</main>
 
-    </main>
+<footer id="footer">
+    <hr>
+    푸터 삽입부
+</footer>
 
-    <footer id="footer"></footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
         crossorigin="anonymous"></script>
 
