@@ -50,13 +50,14 @@ class JpaRepositoryTest {
     void givenTestData_whenInserting_thenWorksFine() {
         // given
         long previousCount = articleRepository.count();
-        UserAccount userAccount = UserAccount.of("power1234", "power12#$", "power123@gmail.com", "powerman", "hello?");
+        UserAccount userAccount = userAccountRepository.save(UserAccount.of("newUser", "pw", null, null, null));
+        Article article = Article.of(userAccount, "new article", "new content", "#spring");
 
         // when
-        Article savedArticle = articleRepository.save(Article.of(userAccount, "new article", "new Content", "#spring"));
+        articleRepository.save(article);
 
         // then
-        assertThat(articleRepository.count()).isEqualTo(1001);
+        assertThat(articleRepository.count()).isEqualTo(previousCount + 1);
     }
 
     @DisplayName("update 테스트")
